@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public static AudioClip clickSound, doorOpen;
+    public static AudioClip clickSound, doorOpen, lockedDoors;
     static AudioSource audioSrc;
 
 	void Start () {
 
         clickSound = Resources.Load<AudioClip>("clickSound");
         doorOpen = Resources.Load<AudioClip>("doorOpen");
+        lockedDoors = Resources.Load<AudioClip>("lockedDoors");
 
         audioSrc = GetComponent<AudioSource>();
 	}
@@ -26,6 +27,9 @@ public class SoundManager : MonoBehaviour {
 
             case "doorOpen":
                 audioSrc.PlayOneShot(doorOpen);
+                break;
+            case "lockedDoors":
+                audioSrc.PlayOneShot(lockedDoors);
                 break;
         }
 

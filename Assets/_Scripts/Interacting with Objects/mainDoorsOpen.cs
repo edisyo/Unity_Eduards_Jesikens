@@ -8,52 +8,47 @@ public class mainDoorsOpen : MonoBehaviour {
     private float theDistance;
     public bool isActive;
     public bool isOpened;
+    public GameObject keys;
 
     private void Start()
     {
         isOpened = false;
+        keys.SetActive(true);
     }
 
     void Update()
     {
         theDistance = PlayerCasting.DistanceFromTarget;
-        doorsOpen();
-        doorsClose();
-    }
-
-    private void doorsOpen()
-    {
-        if (isActive && Input.GetButtonDown("Use") && isOpened == false)
-        {
-            isOpened = true;
-            anim.SetTrigger("doorsOpenMain");
-            SoundManager.PlaySound("doorOpen");
-            
-            
-        }
-    }
-
-    private void doorsClose()
-    {
-        if (isActive && Input.GetButtonDown("Use") && isOpened == true)
-        {
-            anim.SetTrigger("doorsCloseMain");
-            SoundManager.PlaySound("doorOpen");
-            isOpened = false;
-        }
-
     }
 
     private void OnMouseOver()
     {
         if (theDistance <= 5)
         {
-            isActive = true;
+            if (Input.GetButtonDown("Use") && keys.activeInHierarchy == false)
+            {
+                anim.SetBool("openDoors", true);
+                SoundManager.PlaySound("doorOpen");
+
+            } else
+            {
+                if (Input.GetButtonDown("Use")){
+                    SoundManager.PlaySound("lockedDoors");
+                }
+            }
         }
     }
+
     private void OnMouseExit()
     {
-        isActive = false;
+        if (theDistance <= 5)
+        {
+            if (Input.GetButtonDown("Use"))
+            {
+                anim.SetBool("openDoors", false);
+                SoundManager.PlaySound("doorOpen");
+            }
+        }  
     }
 
 }

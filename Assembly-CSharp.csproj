@@ -65,6 +65,7 @@
     <Compile Include="Assets\_Scripts\Interacting with Objects\mainDoorsOpen.cs" />
     <Compile Include="Assets\_Scripts\Interacting with Objects\ObjectPickup.cs" />
     <Compile Include="Assets\_Scripts\Interacting with Objects\PlayerCasting.cs" />
+    <Compile Include="Assets\_Scripts\mainMenu.cs" />
     <Compile Include="Assets\_Scripts\scoringSystem.cs" />
     <Compile Include="Assets\_Scripts\SoundManager.cs" />
     <Compile Include="Assets\X_Assets\ProCore\ProBuilder\API Examples\Icosphere FFT\Scripts\CameraControls.cs" />
@@ -151,11 +152,13 @@
     <None Include="Assets\X_Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
     <None Include="Assets\X_Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\X_Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+    <None Include="Assets\X_Assets\FantasyEnvironments\Environments\README.txt" />
     <None Include="Assets\X_Assets\ProCore\ProBuilder\Shader\pb_ScrollHighlight.shader" />
     <None Include="Assets\X_Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\X_Assets\ProCore\ProBuilder\readme.txt" />
     <None Include="Assets\X_Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\X_Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\X_Assets\SkySerie Freebie\Hdri setup.txt" />
     <None Include="Assets\X_Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\X_Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\X_Assets\ProCore\ProBuilder\Shader\pb_SmoothingPreview.shader" />

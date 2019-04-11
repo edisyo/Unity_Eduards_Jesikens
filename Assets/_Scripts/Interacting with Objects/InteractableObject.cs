@@ -24,7 +24,7 @@ public class InteractableObject : MonoBehaviour {
         if (isActive && Input.GetButtonDown("Use"))
         {
             
-            if(gameObject.tag == "Wood")
+            if(gameObject.tag == "key1")
             {
                 Debug.Log("collected wood");
                 //scoringSystem.theWoodScore += 10;
@@ -32,19 +32,9 @@ public class InteractableObject : MonoBehaviour {
                 theText.SetActive(false);
                 isActive = false;
                 gameObject.SetActive(false);
-                //SoundManager.PlaySound("pickup_wood");
+                SoundManager.PlaySound("click");
             }
 
-            if (gameObject.tag == "Stone")
-            {
-                Debug.Log("collected stone");
-                //scoringSystem.theStoneScore += 10;
-                theCursor.GetComponent<Animator>().Play("close_cursor");
-                theText.SetActive(false);
-                isActive = false;
-                gameObject.SetActive(false);
-                //SoundManager.PlaySound("pickup_stone");
-            }
         }
 	}
 
